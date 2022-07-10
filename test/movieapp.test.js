@@ -30,7 +30,7 @@ describe("Movie App e2e test",()=>{
         browser = await puppeteer.launch
         ({
             ignoreHTTPSErrors: true,
-            headless: false,
+            headless: true,
             defaultViewport: null,
             args:
             [
@@ -45,7 +45,7 @@ describe("Movie App e2e test",()=>{
     });
     
     afterAll(async()=>{
-       //await browser.close();
+       await browser.close();
     });
     
     beforeEach(async()=>{
