@@ -13,15 +13,13 @@ let context = null;
 let page = null;
 let navigationPromise;
 let recorder = null;
-let pageURL = "http://172.105.117.63:3000/";
+let pageURL = "http://172.105.117.63:5000/";
 
 const tableInitialCount = 30;
 const tableBatchCount = 30;
 const defaultTimeout = 1000;
 const defaultTimeoutLong = 12000;
 const defaultTimeoutVeryLong = 120000;
-const defaultStartDate = "Feb 14, 2022";
-const defaultEndDate = "Feb 20, 2022";
 
 
 describe("Movie App e2e test",()=>{
