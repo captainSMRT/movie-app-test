@@ -36,13 +36,13 @@ describe("Movie App e2e test",()=>{
             [
                 "--force-device-scale-factor=0.9",
                 '--start-maximized',
-                '--no-sandbox'
             ]
         });
 
         page = await browser.newPage();
         rpa = new controls.MovieAppRobot(page);
-
+        
+        await page.setViewport({ width: 1366, height: 768});
     });
     
     afterAll(async()=>{
@@ -51,13 +51,15 @@ describe("Movie App e2e test",()=>{
     
     beforeEach(async()=>{
         await page.goto(pageURL);
+        recorder = new PuppeteerScreenRecorder(page);
+        await recorder.start(`./video/${expect.getState().currentTestName}.mp4`);
         let selectorTarget = rpa.transformIDtoJQueryFormat(selectors.shopAnchorSelectorPath);
         await rpa.page.waitForSelector(selectorTarget);
         
     }); 
 
     afterEach(async()=> {
-
+        await recorder.stop();
     });
 
     test(`Test 001`,async()=>{
