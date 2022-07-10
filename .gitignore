@@ -1,0 +1,7 @@
+node_modules
+Screenshots/*
+test-result.json
+junit.xml
+coverage/*
+downloaded/*
+video/*
