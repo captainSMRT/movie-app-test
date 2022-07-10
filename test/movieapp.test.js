@@ -41,7 +41,7 @@ describe("Movie App e2e test",()=>{
 
         page = await browser.newPage();
         rpa = new controls.MovieAppRobot(page);
-
+        
         await page.setViewport({ width: 1366, height: 768});
     });
     
@@ -85,7 +85,7 @@ describe("Movie App e2e test",()=>{
         
         console.log(`${testCaseNumber} Validating if at planning page...`);
         var isAtPlanningPage = await rpa.doesIDExists(selectors.planningContainerID);
-        expect(isAtPlanningPage, "Planning page is not loaded").toBe(false);
+        expect(isAtPlanningPage, "Planning page is not loaded").toBe(true);
     });
 });
 
