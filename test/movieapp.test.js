@@ -35,7 +35,8 @@ describe("Movie App e2e test",()=>{
             args:
             [
                 "--force-device-scale-factor=0.9",
-                '--start-maximized'
+                '--start-maximized',
+                '--no-sandbox'
             ]
         });
 
