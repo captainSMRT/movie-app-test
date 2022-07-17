@@ -17,8 +17,8 @@ class MovieAppRobot extends controls.Robot {
 }
 
 const selectors = {                         
-    planAnchorSelectorPath: "navbarTogglerDemo01 > ul > li:nth-child(2) > a",
-    shopAnchorSelectorPath: "navbarTogglerDemo01 > ul > li:nth-child(3) > a",
+    planAnchorSelectorPath: "navbarTogglerDemo01 > ul > li$planner-link > a",
+    shopAnchorSelectorPath: "navbarTogglerDemo01 > ul > li$shopping-link > a",
 
     planningContainerID:    "planner-container",
     shoppingContainerID:    "shop-container"
