@@ -13,7 +13,7 @@ let context = null;
 let page = null;
 let navigationPromise;
 let recorder = null;
-let pageURL = "http://172.105.117.63:5000/";
+let pageURL = "http://34.200.255.113/";
 
 const tableInitialCount = 30;
 const tableBatchCount = 30;
